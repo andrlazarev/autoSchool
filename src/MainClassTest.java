@@ -14,4 +14,10 @@ public class MainClassTest extends MainClass {
     {
         Assert.assertTrue("getClassNumber вернул число <= 45", this.getClassNumber() > 45);
     }
+
+    @Test
+    public void testGetClassString()
+    {
+        Assert.assertTrue("Метод getClassString не возвращает строку с “hello” или “Hello”", this.getClassString().toLowerCase().contains("hello"));
+    }
 }
