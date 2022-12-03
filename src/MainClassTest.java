@@ -8,4 +8,10 @@ public class MainClassTest extends MainClass {
     {
         Assert.assertTrue("getLocalNumber возвращает число != 14", this.getLocalNumber() == 14);
     }
+
+    @Test
+    public void testGetClassNumber()
+    {
+        Assert.assertTrue("getClassNumber вернул число <= 45", this.getClassNumber() > 45);
+    }
 }
