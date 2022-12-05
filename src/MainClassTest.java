@@ -18,6 +18,12 @@ public class MainClassTest extends MainClass {
     @Test
     public void testGetClassString()
     {
-        Assert.assertTrue("Метод getClassString не возвращает строку с “hello” или “Hello”", this.getClassString().toLowerCase().contains("hello"));
+        boolean expected;
+        if (this.getClassString().contains("hello") || this.getClassString().contains("Hello")) {
+            expected = true;
+        } else {
+            expected = false;
+        }
+        Assert.assertTrue("getClassString вернул не корретную фразу", expected);
     }
 }
